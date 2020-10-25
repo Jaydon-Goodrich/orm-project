@@ -23,6 +23,7 @@ Product.init(
       type: DataTypes.DECIMAL,
       allowNull: false,
       validate: {
+        min: 0.00,
         isDecimal: true
       }
     },
@@ -37,8 +38,7 @@ Product.init(
     category_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'category',
-        key: 'id'
+        model: 'category'
       }
     }
 
